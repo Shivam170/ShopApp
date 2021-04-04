@@ -1,21 +1,16 @@
 package com.example.shopapp.activities
 
-import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.shopapp.R
-import kotlinx.android.synthetic.main.activity_splash.*
 
-
-class SplashActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-
+        setContentView(R.layout.activity_login)
 
         // To Hide the Action Bar
         @Suppress("DEPRECATION")
@@ -27,12 +22,5 @@ class SplashActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-
-        //To Transit from Splash Activity to Main Activity
-        @Suppress("DEPRECATION")
-        Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-            finish()
-        },1500)
     }
 }
